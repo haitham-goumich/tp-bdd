@@ -1,0 +1,7 @@
+{
+  "name": "Firebase Research & Gallery Demo",
+  "description": "An academic presentation and practical demo of Firebase for Advanced Databases course, featuring a functional image gallery using Firebase Storage.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
