@@ -1,10 +1,12 @@
 
 import React from 'react';
-import { firebaseConfig } from '../firebaseConfig';
 
-export const ResearchPaper: React.FC = () => {
-  const projectId = firebaseConfig.projectId;
-  const isLinked = projectId && projectId !== "tp-bdd-c0388-placeholder";
+interface ResearchPaperProps {
+  projectId: string;
+}
+
+export const ResearchPaper: React.FC<ResearchPaperProps> = ({ projectId }) => {
+  const isLinked = projectId !== "غير مربوط";
 
   return (
     <div className="bg-white shadow-xl max-w-4xl mx-auto p-12 my-8 rounded-sm leading-relaxed text-justify border-t-8 border-orange-600 animate-fade-in relative overflow-hidden">
@@ -66,7 +68,7 @@ export const ResearchPaper: React.FC = () => {
       <section className="mb-16">
         <h2 className="text-2xl font-bold text-orange-600 mb-8">2. بنية NoSQL في Firebase</h2>
         <p className="text-slate-700 mb-4">
-          يعتمد نظام التخزين في <span className="font-mono text-blue-600 font-bold">{projectId}</span> على هيكلية Firestore التي تسمح بالاستعلامات المعقدة في زمن حقيقي.
+          يعتمد نظام التخزين في <span className="font-mono text-blue-600 font-bold">{isLinked ? projectId : 'مشروعك'}</span> على هيكلية Firestore التي تسمح بالاستعلامات المعقدة في زمن حقيقي.
         </p>
         <div className="bg-slate-50 border-2 border-dashed border-orange-200 rounded-2xl p-8 text-center my-6">
           <p className="text-orange-800 font-bold mb-2">📸 موقع لقطة الشاشة رقم 1</p>
@@ -89,9 +91,11 @@ export const ResearchPaper: React.FC = () => {
         </div>
       </section>
 
-      <div className="mt-20 border-t pt-8">
-        <p className="text-sm text-slate-500 italic">ملاحظة: تم التحقق من ربط المشروع بنجاح مع {projectId}.</p>
-      </div>
+      {isLinked && (
+        <div className="mt-20 border-t pt-8">
+          <p className="text-sm text-slate-500 italic">ملاحظة: تم التحقق من ربط المشروع بنجاح مع {projectId}.</p>
+        </div>
+      )}
     </div>
   );
 };

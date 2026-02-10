@@ -15,4 +15,4 @@ export interface FirebaseConfig {
   appId: string;
 }
 
-export type AppMode = 'RESEARCH' | 'GALLERY' | 'CONFIG';
+export type AppMode = 'RESEARCH' | 'GALLERY';

@@ -1,10 +1,12 @@
 
+// This file now contains placeholder data.
+// The application will now ask for your configuration interactively
+// in the "Gallery" tab. You no longer need to edit this file.
 export const firebaseConfig = {
-  apiKey: "AIzaSyBwwJt6wGgHdRrXnIjx7USsl-q4RurGRiY",
-  authDomain: "tp-bdd-c0388.firebaseapp.com",
-  projectId: "tp-bdd-c0388",
-  storageBucket: "tp-bdd-c0388.firebasestorage.app",
-  messagingSenderId: "697403129645",
-  appId: "1:697403129645:web:f98ed76d15c8eee7995da4",
-  measurementId: "G-25WYYZTXC1"
+  apiKey: "placeholder-api-key",
+  authDomain: "placeholder-auth-domain",
+  projectId: "not-configured", // This is used to check if the app is configured
+  storageBucket: "placeholder-storage-bucket",
+  messagingSenderId: "placeholder-sender-id",
+  appId: "placeholder-app-id",
 };
